@@ -5,29 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Piedra, papel o tijera</title>
     <script>
+        //Declaracion de funcion
+        function random (min, max) {
+            return Math.floor(Math.random() * (max - min + 1) + min)
+        }
+
+        function eleccion (jugada) {
+            let resultado = ""
+            if (jugada == 1) {
+                resultado = "Piedra"
+            } else if (jugada == 2) {
+                resultado="Papel"
+            } else if (jugada == 3) {
+                resultado="Tijera"
+            } else {
+                resultado="No es una opcion valida"
+            }
+            return resultado
+        }
         // 1 es piedra, 2 es papel y 3 es tijera
         let jugador = 0
-        let pc = 3
+        let pc = random(1,3)
         jugador = prompt("Elige: 1 para piedra, 2 para papel y 3 para tijera")
-        //alert("Elegiste " + jugador)
-        if(jugador == 1) {
-            alert ("Elegiste piedra")
-        } else if (jugador == 2) {
-            alert ("Elegiste papel")
-        } else if (jugador == 3) {
-            alert ("Elegiste tijera")
-        } else {
-            alert("No es una opcion valida")
-        }
-        if(pc == 1) {
-            alert ("PC eligio piedra")
-        } else if (pc == 2) {
-            alert ("PC eligio papel")
-        } else if (pc == 3) {
-            alert ("PC eligio tijera")
-        } else {
-            alert("No es una opcion valida")
-        }
+        
+        alert("Elegiste: " + eleccion(jugador))
+        alert("PC elige: " + eleccion(pc))
+
         //COMBATE
         if(pc == jugador){
             alert("Empate")
