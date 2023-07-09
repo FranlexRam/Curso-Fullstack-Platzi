@@ -97,6 +97,16 @@ function combate() {
         vidasJugador--
         spanVidasJugador.innerHTML = vidasJugador
     }
+
+    revisarVidas()
+}
+
+function revisarVidas() {
+    if (vidasEnemigo == 0) {
+        crearMensajeFinal("FELICITACIONES!! GANASTE!! 🎉🎊🎉🎊")
+    } else if (vidasJugador == 0) {
+        crearMensajeFinal("Lo siento, perdiste...")
+    }
 }
 
 function crearMensaje(resultado) {
@@ -104,6 +114,15 @@ function crearMensaje(resultado) {
 
     let parrafo = document.createElement('p')
     parrafo.innerHTML = `Tu mascota ataco con ${ataqueJugador}. La mascota del enemigo atacó con ${ataqueEnemigo} // ${resultado}`
+
+    seccionMensajes.appendChild(parrafo)
+}
+
+function crearMensajeFinal(resultadoFinal) {
+    let seccionMensajes = document.getElementById('mensajes')
+
+    let parrafo = document.createElement('p')
+    parrafo.innerHTML = resultadoFinal
 
     seccionMensajes.appendChild(parrafo)
 }
