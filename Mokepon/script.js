@@ -100,3 +100,12 @@ function aleatorio(min, max) {
 }
 
 window.addEventListener('load', iniciarJuego)
+
+
+
+
+// Condicionales: leccion 27. Tablas de verdad.
+
+// and operator &&
+// or operator ||
+//not operator !
