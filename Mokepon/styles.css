@@ -75,3 +75,11 @@ input {
     color: white;
     font-family: 'Poppins', sans-serif;
 }
+
+#mensajes {
+    width: 280px;
+    background: pink;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+}
